@@ -16,13 +16,68 @@ const TAGS = ['All', 'Landing Page', 'Full Stack', 'Social Media Designs']
 
 // Replace each placeholder demo URL with that project's deployed website URL.
 const ALL_PROJECTS: Project[] = [
-  { title: 'Modesty', sub: 'Hijab Brand · 2025', tag: 'Landing Page', img: asset('Modesty.png'), desc: 'A landing Page for Hijab and Accessories with clean User friendly Ui inclused social icons and call to action buttons to convert visitors into customers.', action: { type: 'external', label: 'View Demo', href: 'https://mosdesty.vercel.app' } },
-  { title: 'Uniswap', sub: 'Resource Sharing Marketplace · 2025', tag: 'Full Stack', img: asset('Uniswap.png'), desc: 'A full-stack university marketplace that enables students to buy, sell, and exchange semester-specific academic resources through a secure, searchable, and user-friendly platform. It has features like Wishlist, My Listings and PostItem.', action: { type: 'internal', label: 'View More', href: '#/projects/uniswap' } },
-  { title: 'Aurelia', sub: 'Brand Identity · 2026', tag: 'Social Media Designs', img: asset('social media design for Aurelia.png'), desc: 'Ten Instagram post Designs for an organic skincare brand Aurelia', action: { type: 'download', label: 'Download Sample Designs', href: '/sample-designs.zip?v=2' } },
-  { title: 'Levian', sub: 'Artisian Bakery Brand · 2026', tag: 'Landing Page', img: asset('Levian-bakers.png'), desc: 'A modern, Responsive and UI apealing Landing page for an Artisian Bakery brand Levian', action: { type: 'external', label: 'View Demo', href: 'https://levain-bakery-two.vercel.app' } },
-  { title: 'Legal Vault', sub: 'Legal Docs Storage System · 2025', tag: 'Landing Page', img: asset('Legal-vault.png'), desc: 'A blockchain Based Legal Document Storage Website with clean, Respionsive and futuristic UI it includes feature add, search,and a secure login/signup for users  ', action: { type: 'external', label: 'View Demo', href: 'https://legal-vault-pearl.vercel.app' } },
-  { title: 'Globex', sub: 'Consultant Website · 2025', tag: 'Landing Page', img: asset('Globex.png'), desc: 'Minimalist, Professional Landing page for a Consultant Company Globex', action: { type: 'external', label: 'View Demo', href: 'https://globex-gray.vercel.app' } },
-  { title: 'Zarkhaiz', sub: 'Smart Irrigation Dashboard · 2026', tag: 'Full Stack', img: asset('Zarkhaiz.png'), desc: 'An AI-powered smart irrigation dashboard built to monitor agricultural fields through real-time sensor data and intelligent irrigation insights. It provides field and zone-wise monitoring, live soil and environmental conditions, historical data visualization, and AI-driven irrigation predictions to support efficient water management and smarter farming decisions.', action: { type: 'internal', label: 'View More', href: '#/projects/zarkhaiz' }},
+  {
+  title: 'Modesty',
+  sub: 'Hijab Brand · 2025',
+  tag: 'Landing Page',
+  img: asset('Modesty.png'),
+  desc: 'A landing page for Hijab and Accessories with clean, user-friendly UI, included social icons and call-to-action buttons to convert visitors into customers. Built with HTML and CSS.',
+  action: { type: 'external', label: 'View Demo', href: 'https://mosdesty.vercel.app' }
+},
+
+{
+  title: 'Uniswap',
+  sub: 'Resource Sharing Marketplace · 2025',
+  tag: 'Full Stack',
+  img: asset('Uniswap.png'),
+  desc: 'A full-stack university marketplace that enables students to buy, sell, and exchange semester-specific academic resources through a secure, searchable, and user-friendly platform. It has features like Wishlist, My Listings and PostItem.',
+  action: { type: 'internal', label: 'View More', href: '#/projects/uniswap' }
+},
+
+{
+  title: 'Aurelia',
+  sub: 'Brand Identity · 2026',
+  tag: 'Social Media Designs',
+  img: asset('social media design for Aurelia.png'),
+  desc: 'Ten Instagram post Designs for an organic skincare brand Aurelia',
+  action: { type: 'download', label: 'Download Sample Designs', href: '/sample-designs.zip?v=2' }
+},
+
+{
+  title: 'Levian',
+  sub: 'Artisian Bakery Brand · 2026',
+  tag: 'Landing Page',
+  img: asset('Levian-bakers.png'),
+  desc: 'A modern, responsive and UI-appealing landing page for an Artisan Bakery brand Levian. Built with React.js, TypeScript and Tailwind CSS.',
+  action: { type: 'external', label: 'View Demo', href: 'https://levain-bakery-two.vercel.app' }
+},
+
+{
+  title: 'Legal Vault',
+  sub: 'Legal Docs Storage System · 2025',
+  tag: 'Landing Page',
+  img: asset('Legal-vault.png'),
+  desc: 'A blockchain-based legal document storage website with a clean, responsive and futuristic UI. It includes features like document adding, search, and secure login/signup for users. Built with React.js, TypeScript and Tailwind CSS.',
+  action: { type: 'external', label: 'View Demo', href: 'https://legal-vault-pearl.vercel.app' }
+},
+
+{
+  title: 'Globex',
+  sub: 'Consultant Website · 2025',
+  tag: 'Landing Page',
+  img: asset('Globex.png'),
+  desc: 'A minimalist, professional landing page for a consultant company Globex. Built with React.js, TypeScript and Tailwind CSS.',
+  action: { type: 'external', label: 'View Demo', href: 'https://globex-gray.vercel.app' }
+},
+
+{
+  title: 'Zarkhaiz',
+  sub: 'Smart Irrigation Dashboard · 2026',
+  tag: 'Full Stack',
+  img: asset('Zarkhaiz.png'),
+  desc: 'An AI-powered smart irrigation dashboard built to monitor agricultural fields through real-time sensor data and intelligent irrigation insights. It provides field and zone-wise monitoring, live soil and environmental conditions, historical data visualization, and AI-driven irrigation predictions to support efficient water management and smarter farming decisions.',
+  action: { type: 'internal', label: 'View More', href: '#/projects/zarkhaiz' }
+},
 ]
 
 export default function Projects() {
