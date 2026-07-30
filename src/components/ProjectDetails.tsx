@@ -1,28 +1,10 @@
 import { useEffect, useRef } from 'react'
 import Nav from './Nav'
-import { asset } from '../assets'
 import { CREAM, DARK, LIME, MID } from '../lib/theme'
-
-const PROJECT_DETAILS = {
-  uniswap: {
-    title: 'Uniswap',
-    category: 'Full-Stack Web Application',
-    year: '2025',
-    img: asset('Uniswap.png'),
-    video: '/Uniswap-Demo.mp4',
-    description: 'Uniswap is a university resource-sharing marketplace designed to make buying, selling and exchanging semester-specific academic materials simple and secure. Students can discover the resources they need, save favourites and publish their own listings from one streamlined platform.',
-    features: ['Secure account creation and login', 'Searchable, semester-specific resource listings', 'Wishlist to save useful resources', 'My Listings dashboard to manage posts', 'Simple Post Item flow for sellers'],
-    stack: ['React', 'TypeScript', 'Node.js', 'Express', 'MySQL'],
-  },
-  'legal-vault': {
-    title: 'Legal Vault', category: 'Full-Stack Web Application', year: '2025', img: asset('Legal-vault.png'), video: '',
-    description: 'A blockchain-based legal document storage platform with a clean, responsive and futuristic interface.',
-    features: ['Secure authentication', 'Add and search documents', 'Responsive dashboard', 'Blockchain document storage'], stack: ['React', 'TypeScript', 'Node.js'],
-  },
-}
+import { PROJECT_DETAILS } from '../data/ProjectDetails'
 
 export default function ProjectDetails({ slug }: { slug: string }) {
-  const project = PROJECT_DETAILS[slug as keyof typeof PROJECT_DETAILS]
+  const project = PROJECT_DETAILS[slug]
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -40,6 +22,8 @@ export default function ProjectDetails({ slug }: { slug: string }) {
     window.location.hash = '#projects'
     return null
   }
+
+  const overviewHeadline = project.overviewHeadline ?? 'A closer look at the project.'
 
   return (
     <main style={{ minHeight: '100vh', background: DARK, color: CREAM }}>
@@ -67,7 +51,7 @@ export default function ProjectDetails({ slug }: { slug: string }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.35fr) minmax(250px, 0.65fr)', gap: '5rem', marginTop: '7rem' }} className="project-detail-grid">
           <section>
             <p style={{ color: LIME, fontSize: '0.95rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Overview</p>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.5rem, 5vw, 4.2rem)', lineHeight: 1.05, margin: '0 0 1.5rem' }}>Built for sharing knowledge, effortlessly.</h2>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.5rem, 5vw, 4.2rem)', lineHeight: 1.05, margin: '0 0 1.5rem' }}>{overviewHeadline}</h2>
             <p style={{ color: MID, fontSize: '1.02rem', lineHeight: 1.9, margin: 0 }}>{project.description}</p>
           </section>
           <aside style={{ borderLeft: `2px solid ${LIME}`, paddingLeft: '1.5rem', alignSelf: 'start' }}>
