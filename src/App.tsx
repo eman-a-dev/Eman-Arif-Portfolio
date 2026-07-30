@@ -8,6 +8,7 @@ import FAQs from './components/FAQs'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import ProjectDetails from './components/ProjectDetails'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [hash, setHash] = useState(window.location.hash)
@@ -31,6 +32,7 @@ export default function App() {
       <FAQs />
       <CTA />
       <Footer />
+      <Analytics />
     </>
   )
 }
